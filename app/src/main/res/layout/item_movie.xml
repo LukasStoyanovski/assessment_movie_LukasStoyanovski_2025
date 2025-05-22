@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Card view for displaying individual movie items -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <!-- Container for movie item content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Movie poster image -->
+        <ImageView
+            android:id="@+id/moviePoster"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Movie Poster"
+            android:elevation="2dp" />
+
+        <!-- Movie title text -->
+        <TextView
+            android:id="@+id/movieTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/moviePoster"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="48dp"
+            android:layout_alignTop="@id/moviePoster"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:maxLines="3"
+            android:lineSpacingExtra="4dp" />
+
+        <!-- Favorite icon button -->
+        <ImageView
+            android:id="@+id/favoriteIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/movieTitle"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Favorite Icon"
+            android:src="@drawable/ic_star_border"
+            android:padding="4dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

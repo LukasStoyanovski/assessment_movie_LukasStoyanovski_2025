@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ScrollView used to allow vertical scrolling in case content overflows,
+    ensuring the details are accessible on all screen sizes.
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!--
+        Vertical LinearLayout used to stack movie detail components:
+        poster image, title, overview, release date, rating, and share button.
+    -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Full-width movie poster image at the top -->
+        <ImageView
+            android:id="@+id/detailPoster"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Movie Poster" />
+
+        <!-- Movie title text -->
+        <TextView
+            android:id="@+id/detailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <!-- Movie overview / description text -->
+        <TextView
+            android:id="@+id/detailOverview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- Movie release date text -->
+        <TextView
+            android:id="@+id/detailReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" />
+
+        <!-- Movie rating (e.g., 8.1/10) -->
+        <TextView
+            android:id="@+id/detailRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+        <!-- Button to share movie details via other apps -->
+        <Button
+            android:id="@+id/detailShareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Share Movie" />
+    </LinearLayout>
+</ScrollView>
